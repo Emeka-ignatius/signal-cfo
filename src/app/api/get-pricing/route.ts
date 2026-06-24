@@ -7,7 +7,7 @@ export async function GET(request: Request) {
   const ip = request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || ''
   const cleanIp = ip.split(',')[0].trim()
 
-  let priceData = DEFAULT_PRICING
+  let priceData: any = DEFAULT_PRICING
 
   try {
     let countryCode: string | undefined

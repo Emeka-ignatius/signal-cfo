@@ -18,7 +18,7 @@ export default function MagneticButton({ children, className = '', href }: Magne
     const text = textRef.current
     if (!button || !text) return
 
-    const handleMouseMove = (e: MouseEvent) => {
+    const handleMouseMove = (e: any) => {
       const rect = button.getBoundingClientRect()
       const h = rect.width / 2
       const w = rect.height / 2
