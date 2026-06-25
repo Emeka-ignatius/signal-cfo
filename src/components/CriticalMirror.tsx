@@ -4,6 +4,7 @@ import { useGSAP } from '@gsap/react'
 import { setupScrollAnimations } from '@/utils/animations'
 import MagneticButton from './MagneticButton'
 import PricingCard from './PricingCard'
+import FlashlightCard from './FlashlightCard'
 
 export default function CriticalMirror() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -31,18 +32,17 @@ export default function CriticalMirror() {
         {/* Bento Top Row */}
         <div className="grid md:grid-cols-3 gap-6 mb-6">
           {['MAP', 'FIND', 'DELIVER'].map((verb, i) => (
-            <div key={verb} className="gsap-fade-up glass-panel p-10 relative overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-br from-copper/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <p className="relative z-10 text-copper uppercase font-bold text-[12px] tracking-[3px] mb-6 flex items-center gap-4">
+            <FlashlightCard key={verb} className="gsap-fade-up bg-forest-800/40 backdrop-blur-sm border border-white/5 p-10 rounded-md shadow-2xl">
+              <p className="text-copper uppercase font-bold text-[12px] tracking-[3px] mb-6 flex items-center gap-4">
                 <span className="w-6 h-[1px] bg-copper"></span>
                 WE {verb}
               </p>
-              <p className="relative z-10 text-[16px] text-paper leading-relaxed font-medium">
+              <p className="text-[16px] text-paper leading-relaxed font-medium">
                 {i === 0 && "The business model, financial performance, and commercial decisions reviewed in one place."}
                 {i === 1 && "Where performance is leaking. Where you hesitate. Where the numbers stop matching the story."}
                 {i === 2 && "The pattern. The cost. The archetype. The five moves. Within 24 hours of the session."}
               </p>
-            </div>
+            </FlashlightCard>
           ))}
         </div>
         
@@ -59,11 +59,11 @@ export default function CriticalMirror() {
             { label: "THE ARCHETYPE", desc: "The behavioural pattern most likely influencing how decisions are being made inside the business.", span: "md:col-span-6" },
             { label: "THE FIVE MOVES", desc: "Ranked by likely commercial impact, speed, risk, resistance, and ease of implementation. Not generic. The five moves your business is already asking you to make.", span: "md:col-span-6" }
           ].map((item) => (
-            <div key={item.label} className={`gsap-fade-up ${item.span} bg-forest-800/50 backdrop-blur-sm border border-white/5 p-10 hover:border-copper/30 transition-all duration-500 group relative overflow-hidden rounded-md shadow-2xl`}>
-              <div className="absolute top-0 left-0 w-1 h-0 bg-copper group-hover:h-full transition-all duration-500 ease-out"></div>
+            <FlashlightCard key={item.label} className={`gsap-fade-up ${item.span} bg-forest-800/40 backdrop-blur-sm border border-white/5 p-10 rounded-md shadow-2xl`}>
+              <div className="absolute -top-10 -left-10 w-1 h-0 bg-copper group-hover:h-[calc(100%+5rem)] transition-all duration-500 ease-out"></div>
               <p className="font-display font-bold text-[14px] tracking-[2px] text-paper mb-4">{item.label}</p>
               <p className="text-[16px] text-paper-muted leading-relaxed">{item.desc}</p>
-            </div>
+            </FlashlightCard>
           ))}
         </div>
         
