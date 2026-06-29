@@ -1,18 +1,24 @@
 import Hero from '@/components/Hero'
-import NarrativeSection from '@/components/NarrativeSection'
-import FounderSection from '@/components/FounderSection'
+import StatsStrip from '@/components/StatsStrip'
+import RecognitionSection from '@/components/RecognitionSection'
 import CriticalMirror from '@/components/CriticalMirror'
-import TimelineFAQ from '@/components/TimelineFAQ'
+import WhoItsForSection from '@/components/WhoItsForSection'
+import SprintSection from '@/components/SprintSection'
+import FounderSection from '@/components/FounderSection'
+import FinalCtaSection from '@/components/FinalCtaSection'
 import Footer from '@/components/Footer'
 
 export default function Home() {
   return (
     <main className="relative bg-forest-900 min-h-screen">
       <Hero />
-      <NarrativeSection />
-      <FounderSection />
+      <RecognitionSection />
       <CriticalMirror />
-      <TimelineFAQ />
+      <WhoItsForSection />
+      <SprintSection />
+      <StatsStrip />
+      <FounderSection />
+      <FinalCtaSection />
       <Footer />
     </main>
   )

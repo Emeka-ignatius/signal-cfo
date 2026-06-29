@@ -2,6 +2,7 @@
 import { useRef, ReactNode } from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
+import TransitionLink from './TransitionLink'
 
 interface MagneticButtonProps {
   children: ReactNode
@@ -76,9 +77,9 @@ export default function MagneticButton({ children, className = '', href }: Magne
 
   if (href) {
     return (
-      <a href={href} {...commonProps}>
+      <TransitionLink href={href} {...commonProps}>
         {innerContent}
-      </a>
+      </TransitionLink>
     )
   }
 

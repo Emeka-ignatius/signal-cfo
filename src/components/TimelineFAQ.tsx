@@ -63,7 +63,7 @@ export default function TimelineFAQ() {
           <h2 className="gsap-fade-up font-display font-bold text-4xl md:text-5xl text-paper mb-6">Founder-led businesses<br/>between £1m and £20m.</h2>
           <p className="gsap-fade-up text-[17px] text-paper-muted mb-6">Built for founders who've reached the point where putting in more effort isn't producing better results.</p>
           <p className="gsap-fade-up text-[17px] text-paper-muted mb-6">You've probably already got accountants, advisers, marketers, dashboards, and management reports. You still can't clearly see which decision will change the business fastest.</p>
-          <p className="gsap-fade-up font-serif italic text-xl text-paper mt-8">That's the gap the Critical Mirror closes.</p>
+          <p className="gsap-fade-up font-serif text-xl text-paper mt-8">That's the gap the Critical Mirror closes.</p>
         </div>
       </section>
 
@@ -75,7 +75,7 @@ export default function TimelineFAQ() {
             <h2 className="gsap-fade-up font-display font-bold text-4xl md:text-5xl text-paper mb-6">The Sprint</h2>
             <p className="gsap-fade-up text-[16px] text-paper-muted mb-6">The Mirror identifies the real constraint.<br/>The Sprint helps fix it.</p>
             <p className="gsap-fade-up text-[16px] text-paper-muted mb-6">Every week: what moved, what stalled, what leaked, and which decision matters next. Faster pricing decisions. Cleaner client decisions. Better hiring decisions. Less drift. Less avoidance.</p>
-            <p className="gsap-fade-up text-[14px] font-serif italic text-paper-muted mt-8">Some founders leave the Mirror with enough clarity to act themselves. We'll determine which applies through the Mirror.</p>
+            <p className="gsap-fade-up text-[14px] font-serif text-paper-muted mt-8">Some founders leave the Mirror with enough clarity to act themselves. We'll determine which applies through the Mirror.</p>
           </div>
           <div className="mt-6 relative">
             <div className="absolute left-0 top-1.5 bottom-0 w-[2px] bg-white/10"></div>

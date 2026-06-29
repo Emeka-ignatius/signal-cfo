@@ -4,9 +4,10 @@ import { useRef, MouseEvent, ReactNode } from 'react'
 interface FlashlightCardProps {
   children: ReactNode;
   className?: string;
+  style?: React.CSSProperties;
 }
 
-export default function FlashlightCard({ children, className = '' }: FlashlightCardProps) {
+export default function FlashlightCard({ children, className = '', style }: FlashlightCardProps) {
   const cardRef = useRef<HTMLDivElement>(null)
 
   const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
@@ -23,6 +24,7 @@ export default function FlashlightCard({ children, className = '' }: FlashlightC
       ref={cardRef}
       onMouseMove={handleMouseMove}
       className={`relative group ${className}`}
+      style={style}
     >
       {/* Flashlight background glow */}
       <div 
