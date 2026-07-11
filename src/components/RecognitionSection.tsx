@@ -18,7 +18,7 @@ export default function RecognitionSection() {
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="mb-20 text-center md:text-left">
-          <p className="gsap-fade-up text-[10px] font-medium tracking-[0.28em] uppercase text-copper-muted mb-6">
+          <p className="gsap-fade-up text-md font-medium tracking-[0.28em] uppercase text-copper-muted mb-6">
             Three things founders recognise too late
           </p>
           <h2 className="gsap-fade-up font-display font-light text-[clamp(36px,5vw,58px)] leading-[1.05] text-paper">
@@ -27,7 +27,7 @@ export default function RecognitionSection() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-[1px] bg-copper/20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-copper/20">
           {/* Card 1 */}
           <FlashlightCard className="gsap-fade-up bg-forest-800 relative group transition-colors">
             <div className="p-10 md:p-12 h-full flex flex-col">

@@ -22,7 +22,7 @@ export default function SprintPage() {
       {/* Sprint Details */}
       <section className="px-6 md:px-12 pb-24 relative z-10">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-forest-800/80 border-l-[2px] border-copper p-10 md:p-14">
+          <div className="bg-forest-800/80 border-l-2 border-copper p-10 md:p-14">
             <p className="font-sans text-[15px] font-light text-text-secondary leading-[1.85] max-w-3xl mb-6">
               The Sprint is a 3-month implementation engagement for founders who want hands-on support after the diagnostic. We work through the five moves identified in the Critical Mirror and turn them into practical changes across finance, pricing, cash, operations, client mix, hiring and decision structure.
             </p>
@@ -55,7 +55,7 @@ export default function SprintPage() {
       <section className="px-6 md:px-12 py-24 relative z-10 border-t border-white/5 bg-forest-800/30">
         <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-16 items-start">
           <div className="md:col-span-1">
-            <h2 className="font-display font-light text-[42px] leading-[1.0] text-paper mb-4">
+            <h2 className="font-display font-light text-[42px] leading-none text-paper mb-4">
               Jay<br />
               Maniar
             </h2>
@@ -72,7 +72,7 @@ export default function SprintPage() {
                 "UK Government Help to Grow programme",
                 "2026 National Mentoring Matters finalist — Excellence in Mentoring & Personal Impact"
               ].map((cred, i) => (
-                <div key={i} className="font-sans text-[12px] font-normal text-text-muted pl-4 border-l border-copper-muted tracking-[0.04em] leading-[1.5]">
+                <div key={i} className="font-sans text-[12px] font-normal text-text-muted pl-4 border-l border-copper-muted tracking-[0.04em] leading-normal">
                   {cred}
                 </div>
               ))}

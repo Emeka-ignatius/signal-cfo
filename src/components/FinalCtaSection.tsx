@@ -14,10 +14,8 @@ export default function FinalCtaSection() {
   useGSAP(() => {
     if (!containerRef.current) return;
     
-    // Base fade-up animations
     setupScrollAnimations(containerRef.current)
 
-    // Breathing & Parallax orb
     gsap.to('.cta-orb', {
       y: 100,
       scale: 1.2,
@@ -40,28 +38,45 @@ export default function FinalCtaSection() {
   }, { scope: containerRef })
 
   return (
-    <section id="fit-check" ref={containerRef} className="py-32 px-6 md:px-12 bg-forest-900 relative border-t border-white/5 text-center overflow-hidden">
-      <div className="cta-orb absolute left-1/2 top-0 -translate-x-1/2 w-[600px] h-[400px] bg-copper/10 blur-[80px] rounded-full pointer-events-none opacity-30"></div>
+    <section id="fit-check" ref={containerRef} className="py-32 px-6 md:px-12 bg-forest-900 relative border-t border-white/10 text-center overflow-hidden">
+      <div className="cta-orb absolute left-1/2 top-0 -translate-x-1/2 w-[600px] h-[400px] bg-copper/15 blur-[90px] rounded-full pointer-events-none opacity-40"></div>
 
-      <div className="max-w-3xl mx-auto relative z-10">
-        <h2 className="gsap-fade-up font-display font-light text-[clamp(42px,6vw,72px)] leading-[1.05] text-paper mb-6">
-          Look at all the signals.<br />
-          <span className="text-copper">Not just the financial ones.</span>
+      <div className="max-w-4xl mx-auto relative z-10">
+        <p className="gsap-fade-up text-copper uppercase font-sans font-semibold text-sm md:text-lg tracking-[0.28em] mb-6">
+          THE NEXT MOVE
+        </p>
+        <h2 className="gsap-fade-up font-display font-bold text-[clamp(36px,5.5vw,68px)] leading-[1.08] text-paper mb-8">
+          Stop staring at clean accounts and calling it <span className="text-copper">strategy.</span>
         </h2>
         
-        <p className="gsap-fade-up font-sans text-[15px] font-light text-text-secondary leading-[1.8] mb-12 max-w-lg mx-auto">
-          Short call. Straight answer on whether this is the right fit. If it isn't, you'll be told directly.
-        </p>
-
-        <div className="gsap-fade-up mb-6">
-          <MagneticButton href="https://tidycal.com/jaysmaniar/30-minute-meeting" className="group overflow-hidden bg-transparent border border-copper hover:bg-copper transition-colors text-paper hover:text-forest-900 font-sans font-medium text-[11px] tracking-[0.2em] uppercase py-[16px] px-[36px] text-center inline-block">
-            Book a free fit check
-          </MagneticButton>
+        <div className="gsap-fade-up space-y-4 font-sans text-lg md:text-xl text-text-secondary font-light max-w-2xl mx-auto mb-12 leading-relaxed">
+          <p>
+            Your numbers already know more than you think. Signals CFO turns them into the 5 moves that matter next.
+          </p>
+          <p className="text-paper font-medium">
+            So you can stop carrying every decision and start moving with certainty.
+          </p>
         </div>
 
-        <p className="gsap-fade-up font-sans text-[11px] font-normal tracking-[0.06em] text-text-muted mt-5">
-          No bloated proposal. No vague advisory package. No polite nonsense.
-        </p>
+        <div className="gsap-fade-up bg-forest-800/80 border border-copper/30 p-8 md:p-10 max-w-3xl mx-auto mb-12">
+          <p className="font-display font-bold text-2xl md:text-4xl text-paper mb-8">
+            Walk in with the noise.<br />
+            <span className="text-copper">Walk out with the next 5 moves.</span>
+          </p>
+          <div>
+            <MagneticButton 
+              href="https://tidycal.com/jaysmaniar/30-minute-meeting"
+              className="inline-block bg-copper hover:bg-copper-light transition-colors text-forest-900 font-sans font-bold text-[13px] tracking-[0.2em] uppercase py-[18px] px-[44px] shadow-[0_0_35px_rgba(184,115,51,0.3)]"
+            >
+              Apply for the Critical Mirror
+            </MagneticButton>
+          </div>
+        </div>
+
+        <div className="gsap-fade-up font-sans text-sm md:text-lg text-text-muted space-y-1">
+          <p className="text-paper font-medium">I only run 6 each month.</p>
+          <p>If it’s right, I’ll say so. If it’s overkill, I’ll tell you that too.</p>
+        </div>
       </div>
     </section>
   )
